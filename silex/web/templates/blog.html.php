@@ -30,7 +30,7 @@
 
                     <div class='featurette forms head'>
                         <div class="col-md-4"> Post Nr. <?= $post['id'] ?></div>
-                        <div class="col-md-4"> Titel: <?= $post['title'] ?> </div>
+                        <div class="col-md-4"> Title: <?= $post['title'] ?> </div>
                         <div class="col-md-4"> Author: <?= $post['author'] ?> </div>
                     </div>
                     <div class="">
@@ -52,7 +52,7 @@
                                    href="/readfull/<?= $post['id'] ?>">read on</a></div>
 
                             <div class="col-xs-2">
-                                <a class="btn btn-default btn-warning" name="nextid"
+                                <a class="btn btn-default" name="nextid"
                                    href="/deletepost/<?= $post['id'] ?>">delete post</a></div>
                         </div>
 

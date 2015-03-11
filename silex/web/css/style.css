@@ -226,15 +226,15 @@ footer {
 
 .btn-delete {
 
-    color: white;
+    color: #000000;
     border-top: dashed;
-    text-decoration-color: white;
+
 
 }
 
 .btn-delete a {
 
-    color: white;
+    color: #000000;
 
 }
 
@@ -248,13 +248,13 @@ footer {
 .navbar-login {
     width: 305px;
     padding: 10px;
-    padding-bottom: 0px;
+    padding-bottom: 0;
 }
 
 .navbar-login-session {
     padding: 10px;
-    padding-bottom: 0px;
-    padding-top: 0px;
+    padding-bottom: 0;
+    padding-top: 0;
 }
 
 .icon-size {
