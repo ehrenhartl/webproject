@@ -16,9 +16,6 @@ $app->get('/welcome-twig/{name}', function ($name) use ($app) {
 });
 
 
-
-
-
 $app->get('/static', function (Request $request) use ($app) {
 
     session_start();
@@ -56,9 +53,9 @@ $app->get('/static', function (Request $request) use ($app) {
 
 
     } else {
-            return $app['templating']->render(
-                'static.html.php');
-        }
+        return $app['templating']->render(
+            'static.html.php');
+    }
 });
 
 $app->match('/blog', function (Request $request) use ($app) {
@@ -67,30 +64,32 @@ $app->match('/blog', function (Request $request) use ($app) {
     $dbConnection = $app['db'];
 
     $posts = $dbConnection->fetchAll('SELECT * FROM blog_post WHERE title IS NOT NULL');    //important because we dont want to see the new author inserts.
+    if (empty($posts)) {
 
+        return $app['templating']->render(
+            'emptyblog.html.php'
+        );
+    }
 
     return $app['templating']->render(
-        'blog.html.php',array(('posts')=>$posts));
+        'blog.html.php', array(('posts') => $posts));
 });
 
 
 $app->match('/readfull/{id}', function ($id) use ($app) {
 
-   // session_start();
-    $dbConnection =$app['db'];
+    // session_start();
+    $dbConnection = $app['db'];
 
 
+    $posts = $dbConnection->fetchAssoc('SELECT * FROM blog_post WHERE id= ?', array($id));
 
-
-    $posts=$dbConnection->fetchAssoc('SELECT * FROM blog_post WHERE id= ?', array($id));
-
-    return $app['templating']->render('readfull.html.php', array(('posts')=>$posts,'id'=>$id));
+    return $app['templating']->render('readfull.html.php', array(('posts') => $posts, 'id' => $id));
 });
 
 $app->match('/deletepost/{id}', function ($id) use ($app) {
     session_start();
-    $dbConnection =$app['db'];
-
+    $dbConnection = $app['db'];
 
 
     $dbConnection->delete(
@@ -99,9 +98,9 @@ $app->match('/deletepost/{id}', function ($id) use ($app) {
 
     );
 
-    $posts=$dbConnection->fetchAll('SELECT * FROM blog_post');
+    $posts = $dbConnection->fetchAll('SELECT * FROM blog_post');
 
-    return $app['templating']->render('blog.html.php', array('posts'=>$posts,'id'=>$id,'success' => true));
+    return $app['templating']->render('blog.html.php', array('posts' => $posts, 'id' => $id, 'success' => true));
 
 });
 
@@ -165,12 +164,11 @@ $app->match('/newentry', function (Request $request) use ($app) {
 });
 
 
-
 $app->match('/login', function (Request $request) use ($app) {
 
     if ($request->isMethod("post")) {
         $name = $request->get("name", "");
-       // $password = $request->get("password", "");
+        // $password = $request->get("password", "");
 
 
         if ($name == "") {
@@ -191,10 +189,9 @@ $app->match('/login', function (Request $request) use ($app) {
                 'blog_post',
                 array(
                     'author' => $name,
-                    )
+                )
 
             );
-
 
 
             return $app['templating']->render(
@@ -211,7 +208,6 @@ $app->match('/login', function (Request $request) use ($app) {
 
     //$_POST;
 });
-
 
 
 $app->get('/logout', function () use ($app) {

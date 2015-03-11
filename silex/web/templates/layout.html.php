@@ -1,4 +1,3 @@
-
 <?php
 /**
  * @var $view
@@ -20,9 +19,9 @@ $title = $view["slots"]->get("title");
     <title> <?= $title ?> </title>
 
     <!--wird leider nicht erkannt: -->
-<!--    <link rel="stylesheet" type="text/css" href="/vendor/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
--->
+    <!--    <link rel="stylesheet" type="text/css" href="/vendor/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="/css/style.css">
+    -->
 
     <link rel="stylesheet" type="text/css" href="/css/style.css">
     <script src="../vendor/jquery/dist/jquery.min.js"></script>
@@ -38,7 +37,7 @@ $title = $view["slots"]->get("title");
     <!-- Das neueste kompilierte und minimierte JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
-  <!--  <base href="http://localhost:8001/"/>  -->
+    <!--  <base href="http://localhost:8001/"/>  -->
 
 </head>
 
@@ -56,9 +55,10 @@ $title = $view["slots"]->get("title");
             </button>
             <a href="/static" class="navbar-brand">Portfolio</a>
             <span class="icon1">
-            <a class="visible-lg navbar-brand-middle navbar-brand"><span>Created with </span><span class="icon1 glyphicon glyphicons glyphicon-heart"></span><span> by Leon Ehrenhart</span></a>
-            <span>
-            </div>
+            <a class="visible-lg navbar-brand-middle navbar-brand"><span>Created with </span><span
+                    class="icon1 glyphicon glyphicons glyphicon-heart"></span><span> by Leon Ehrenhart</span></a>
+            </span>
+        </div>
         <!-- Collection of nav links and other content for toggling -->
         <div id="navbarCollapse" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
@@ -79,7 +79,7 @@ $title = $view["slots"]->get("title");
                         <strong><?php if (isset($_SESSION["username"]))
 
                                 echo $_SESSION["username"] . "<br>";
-                                else echo "Please log in";
+                            else echo "Please log in";
                             ?></strong>
                         <span class="glyphicon glyphicon-chevron-down"></span>
                     </a>
@@ -96,11 +96,13 @@ $title = $view["slots"]->get("title");
                                         <p class="text-left"><strong><?php if (isset($_SESSION["username"]))
 
                                                     echo "User: " . $_SESSION["username"] . "<br>";
-                                                    else echo"Press login";
+                                                else echo "Press login";
                                                 ?></strong></p>
+
                                         <p class="text-left small"></p>
+
                                         <p class="text-left">
-                                            <a  href="/login"  class="btn btn-primary btn-block btn-sm">Login</a>
+                                            <a href="/login" class="btn btn-primary btn-block btn-sm">Login</a>
                                         </p>
                                     </div>
                                 </div>
@@ -129,13 +131,10 @@ $title = $view["slots"]->get("title");
 
 <div class="container bottom">
 
-    <p>
+    <img class=" footer-w3c" src="http://jigsaw.w3.org/css-validator/images/vcss"
+         alt="CSS ist valide!"/>
+    <img class="html5" src="http://www.w3.org/html/logo/downloads/HTML5_Logo_256.png" alt="html5 valid page">
 
-            <img class=" footer-w3c" style="border:0;width:88px;height:31px"
-                 src="http://jigsaw.w3.org/css-validator/images/vcss"
-                 alt="CSS ist valide!" />
-        </a>
-    </p>
 
 </div>
 </body>

@@ -17,6 +17,7 @@
     <div class="headline">
         <div class="container">
             <h1>Welcome to my Photoblog</h1>
+
             <h2>Feel free to write a post!</h2>
         </div>
     </div>
@@ -28,23 +29,28 @@
     <hr class="featurette-divider">
 
     <!-- First Featurette -->
-    <div class="featurette" id="about">
-        <img class="featurette-image img-rounded img-responsive pull-right" src="../img/Sky.jpg">
+    <div class="featurette">
+        <img class="featurette-image img-rounded img-responsive pull-right" alt="picture of a sky" src="../img/Sky.jpg">
+
         <h2 class="featurette-heading">This is my first Picture
             <span class="text-muted">And it is pretty cool</span>
         </h2>
-        <p class="description">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+
+        <p class="description">Sky and some trees.</p>
     </div>
 
     <hr class="featurette-divider">
 
     <!-- Second Featurette -->
-    <div class="featurette" id="services">
-        <img class="featurette-image img-rounded img-responsive pull-left" src="../img/DSC_1380_002.JPG">
+    <div class="featurette">
+        <img class="featurette-image img-rounded img-responsive pull-left" alt="picture of the skyline of frankfurt"
+             src="../img/DSC_1380_002.JPG">
+
         <h2 class="featurette-heading">That is the second picture.
             <span class="text-muted">Its Pretty Cool Too.</span>
         </h2>
-        <p class="description">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+
+        <p class="description">That is the skyline in frankfurt.</p>
     </div>
 
     <hr class="featurette-divider">
@@ -52,10 +58,39 @@
 
 </div>
 <!-- /.container -->
+<div class="container">
+
+    <div class="col-md-6">
+        <ul class="list-group">
+            <li class="list-group-item list-group-item-success">Lorem amet, ctr, sed diam nonumy eirmod tempor invidunt
+                ut l
+            </li>
+            <li class="list-group-item list-group-item-info">Loremt amet, consetetur sadipscing elitr,mod tempor
+                invidunt ut lro
+            </li>
+            <li class="list-group-item list-group-item-warning">Port Lorem ipsg elitr, sed diar invidunt ut lconsectetur
+                ac
+            </li>
+            <li class="list-group-item list-group-item-danger">Vest dolor sity eirmod tempor invidunt ut llum at eros
+            </li>
+        </ul>
+
+    </div>
+    <div class="col-md-6"><!-- List group -->
+        <ul class="list-group">
+            <li class="list-group-item">Cras justo odio</li>
+            <li class="list-group-item">Dapibus ac facilisis in</li>
+            <li class="list-group-item">Morbi leo risus</li>
+            <li class="list-group-item">Porta ac consectetur ac</li>
+
+        </ul>
+    </div>
 
 
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</div>
+
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
 
 

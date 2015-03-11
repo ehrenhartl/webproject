@@ -2,17 +2,17 @@
 <?php $view['slots']->set('title', 'form') ?>
 
 
-<div class="container">
+<div class="container featurette forms">
 
     <div class="alert alert-success" role="alert">You are now logged out.</div>
     <div class="container">
-    <form method='post' action='/blog'>
-        <nav>
-            <ul class="pager">
-                <li class="next"><a type='submit'  name='nextid' href='/blog'> Watch the blog! <span aria-hidden='true'> &rarr;
+        <form method='post' action='/blog'>
+            <nav>
+                <ul class="pager forms">
+                    <li class="next"><a name='nextid' href='/blog'> Watch the blog! <span aria-hidden='true'> &rarr;
                 </span></a></li>
-            </ul>
-        </nav>
-    </form>
+                </ul>
+            </nav>
+        </form>
     </div>
 </div>

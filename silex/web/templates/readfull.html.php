@@ -1,14 +1,14 @@
 <?php
 $view->extend('layout.html.php');
-$view['slots']->set('title', 'Eintrag: '. $id);
+$view['slots']->set('title', 'Eintrag: ' . $id);
 ?>
 
 <!-- Datei, die zum darstellen eines einzelnen Beitrags genutzt wird -->
 
-<body>
+
 <div class="container">
     <!-- Platzhalter -->
-    <div class = "col-xs-1"></div>
+    <div class="col-xs-1"></div>
     <div class="row">
         <div class="col-xs-12">
             <div class="panel panel-default">
@@ -22,6 +22,5 @@ $view['slots']->set('title', 'Eintrag: '. $id);
             </div>
         </div>
     </div>
-    <div class = "col-xs-1"></div>
+    <div class="col-xs-1"></div>
 </div>
-</body>

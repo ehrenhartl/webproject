@@ -1,14 +1,13 @@
 
 body {
-   background: url('../img/pure-kunst.jpg') fixed center no-repeat !important;
-   filter: blur(5px);
-    width:100%;
-    display:block;
+    background: url('../img/pure-kunst.jpg') fixed center no-repeat !important;
+    width: 100%;
+    display: block;
     background-size: cover;
-  /*  background-position: center; */
-    height: auto;
 
+    height: auto;
 }
+
 /*
  Big images
 
@@ -16,21 +15,12 @@ body {
 
 .header-image {
     display: block;
-   /* padding: 150px 0; */
     padding: 80px 0;
     width: 100%;
     text-align: center;
-   background: url('../img/innsbruck2.jpg') fixed no-repeat center center;
-  /*  background: url('../img/DSC_1688.jpg') fixed no-repeat center center; */
-    filter: blur(5px);
+    background: url('../img/innsbruck2.jpg') fixed no-repeat center center;
     margin-top: -20px;
-
-
-
-    filter: blur(5px);
-
-
-    height:auto;
+    height: auto;
     background-size: cover;
 
 }
@@ -40,21 +30,19 @@ body {
 
     width: 100%;
 
-
 }
 
 .headline h1 {
     font-size: 100px;
     background: #fff;
-    background: rgba(255,255,255,0.9);
-
+    background: rgba(255, 255, 255, 0.9);
 
 }
 
 .headline h2 {
     font-size: 77px;
     background: #fff;
-    background: rgba(255,255,255,0.9);
+    background: rgba(255, 255, 255, 0.9);
 
 }
 
@@ -65,18 +53,18 @@ body {
 .featurette {
     overflow: hidden;
     background-color: rgba(224, 255, 241, 0.59);
-    filter: blur(5px);
     border-radius: 20px;
 
 }
+
 .description {
 
     font-size: 20px;
     font-family: "Megrim", sans-serif;
     padding: 20px;
 
-
 }
+
 .featurette-image.pull-left {
     margin-right: 40px;
     width: 50%;
@@ -90,7 +78,7 @@ body {
 }
 
 .featurette-heading {
-    margin-inside: 10px;
+
     padding: 20px;
     font-size: 50px;
 }
@@ -99,7 +87,7 @@ footer {
     margin: 50px 0;
 }
 
-@media(max-width:1200px) {
+@media (max-width: 1200px) {
     .headline h1 {
         font-size: 140px;
     }
@@ -125,7 +113,7 @@ footer {
     }
 }
 
-@media(max-width:991px) {
+@media (max-width: 991px) {
     .headline h1 {
         font-size: 105px;
     }
@@ -155,7 +143,7 @@ footer {
     }
 }
 
-@media(max-width:768px) {
+@media (max-width: 768px) {
     .container {
         margin: 0 15px;
     }
@@ -169,7 +157,7 @@ footer {
     }
 }
 
-@media(max-width:668px) {
+@media (max-width: 668px) {
     .headline h1 {
         font-size: 70px;
     }
@@ -183,7 +171,7 @@ footer {
     }
 }
 
-@media(max-width:640px) {
+@media (max-width: 640px) {
     .headline {
         padding: 75px 0 25px 0;
     }
@@ -197,7 +185,7 @@ footer {
     }
 }
 
-@media(max-width:375px) {
+@media (max-width: 375px) {
     .featurette-divider {
         margin: 10px 0;
     }
@@ -217,11 +205,8 @@ footer {
     }
 }
 
-
-
 /* */
-.navbar-brand-middle
-{
+.navbar-brand-middle {
     position: absolute;
     width: 100%;
     left: 0;
@@ -232,23 +217,18 @@ footer {
 .glyphicons {
 
     color: #0C6;
-    letter-spacing:6px;
+    letter-spacing: 6px;
 }
+
 .icon1:hover {
     color: #F00;
 }
-
-
 
 .btn-delete {
 
     color: white;
     border-top: dashed;
     text-decoration-color: white;
-
-
-
-
 
 }
 
@@ -258,7 +238,6 @@ footer {
 
 }
 
-
 .colorchange {
 
     font-size: small;
@@ -266,28 +245,21 @@ footer {
     padding: 20px;
 }
 
-
-
-.navbar-login
-{
+.navbar-login {
     width: 305px;
     padding: 10px;
     padding-bottom: 0px;
 }
 
-.navbar-login-session
-{
+.navbar-login-session {
     padding: 10px;
     padding-bottom: 0px;
     padding-top: 0px;
 }
 
-.icon-size
-{
+.icon-size {
     font-size: 87px;
 }
-
-
 
 .handsup {
     padding: 20px;
@@ -302,17 +274,40 @@ footer {
 
 .footer-w3c {
 
-    position:fixed;
+    position: fixed;
     bottom: 20px;
-    left:2px;
+    left: 2px;
     opacity: 0.5;
-
-
 
 }
 
 .footer-w3c:hover {
 
+    opacity: 1;
+
+}
+
+.forms {
+    padding: 20px;
+}
+
+.head {
+    font-size: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+
+}
+
+.html5 {
+
+    width: 5%;
+    position: fixed;
+    bottom: 20px;
+    right: 2px;
+    opacity: 0.5;
+}
+
+.html5:hover {
 
     opacity: 1;
 

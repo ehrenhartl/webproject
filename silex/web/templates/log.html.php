@@ -11,11 +11,11 @@
     </div>
 
 <?php } ?>
-<div class="container">
+<div class="container featurette forms">
 <form method="post">
 
 
-    <label for="titel">Please insert your name</label>
+    <label>Please insert your name</label>
 
     <div class="form-group">
         <input type="text" id="name" name="name" class="form-control"

@@ -9,7 +9,7 @@
     <form method='post' action='/blog'>
         <nav>
             <ul class="pager">
-                <li class="next"><a type='submit'  name='nextid' href='/blog'> Blog <span aria-hidden='true'> &rarr;
+                <li class="next"><a type='submit' name='nextid' href='/blog'> Blog <span aria-hidden='true'> &rarr;
                 </span></a></li>
             </ul>
         </nav>
