@@ -1,3 +1,11 @@
+<?php
+/**
+ * @var $view
+ * @var $slots \Symfony\Component\Templating\Helper\SlotsHelper
+ *
+ */
+
+?>
 <?php $view->extend('layout.html.php') ?>
 <?php $view['slots']->set('title', 'blog') ?>
 
@@ -10,7 +18,7 @@
 
     <?php if (isset($success) && $success) { ?>
 
-        <div class="container">
+        <div class="container"> //only visible when var success is set!
             <div class="row">
                 <div class="col-xs-10 col-xs-offset-1">
                     <div class="alert alert-danger" role="alert">Successfully deleted! Reload this page now.</div>

@@ -1,3 +1,12 @@
+<?php
+/**
+ * @var $view
+ * @var $slots \Symfony\Component\Templating\Helper\SlotsHelper
+ *
+ */
+
+?>
+
 <?php $view->extend('layout.html.php') ?>
 <?php $view['slots']->set('title', 'new entry') ?>
 

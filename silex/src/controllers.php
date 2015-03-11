@@ -16,49 +16,16 @@ $app->get('/welcome-twig/{name}', function ($name) use ($app) {
 });
 
 
-$app->get('/static', function (Request $request) use ($app) {
+$app->get('/static', function () use ($app) {
 
     session_start();
-    if ($request->isMethod("post")) {
-        $name = $request->get("name", "");
-        $password = $request->get("password", "");
 
-
-        if ($name == "" || $password == "") {
-            return $app['templating']->render(
-                'newentry.html.php', array('err' => true));
-            //$name.$message;
-
-        } else {
-
-            /** @var Doctrine\DBAL\Connection $dbConnection */
-
-            $dbConnection = $app['db'];
-
-
-            $dbConnection->insert(
-                'users',
-                array(
-                    'name' => $name,
-                    'password' => $password,
-
-                )
-
-            );
-
-
-            return $app['templating']->render(
-                'success.html.php');
-        }
-
-
-    } else {
         return $app['templating']->render(
             'static.html.php');
-    }
+
 });
 
-$app->match('/blog', function (Request $request) use ($app) {
+$app->match('/blog', function () use ($app) {
     session_start();
 
     $dbConnection = $app['db'];
@@ -76,13 +43,13 @@ $app->match('/blog', function (Request $request) use ($app) {
 });
 
 
-$app->match('/readfull/{id}', function ($id) use ($app) {
+$app->match('/readfull/{id}', function ($id) use ($app) {       //let us read the full post with the id
 
     // session_start();
     $dbConnection = $app['db'];
 
 
-    $posts = $dbConnection->fetchAssoc('SELECT * FROM blog_post WHERE id= ?', array($id));
+    $posts = $dbConnection->fetchAssoc('SELECT * FROM blog_post WHERE id= ?', array($id));      //fetch only the post with the id
 
     return $app['templating']->render('readfull.html.php', array(('posts') => $posts, 'id' => $id));
 });
@@ -105,15 +72,6 @@ $app->match('/deletepost/{id}', function ($id) use ($app) {
 });
 
 
-/*
-$app->get('/login', function () use ($app) {
-    return $app['templating']->render(
-        'log.html.php'
-
-    );
-});
-
-*/
 
 $app->match('/newentry', function (Request $request) use ($app) {
     session_start();
@@ -149,7 +107,7 @@ $app->match('/newentry', function (Request $request) use ($app) {
 
             return $app['templating']->render(
                 'success.html.php');
-            //session_start();
+
         }
 
 
@@ -168,19 +126,19 @@ $app->match('/login', function (Request $request) use ($app) {
 
     if ($request->isMethod("post")) {
         $name = $request->get("name", "");
-        // $password = $request->get("password", "");
+
 
 
         if ($name == "") {
             return $app['templating']->render(
                 'log.html.php', array('err' => true));
-            //$name.$message;
+
 
         } else {
 
             /** @var Doctrine\DBAL\Connection $dbConnection */
 
-            session_start();
+            session_start();                                    //start session and set the author name to the username
             $_SESSION["username"] = $name;
 
             $dbConnection = $app['db'];
@@ -188,7 +146,7 @@ $app->match('/login', function (Request $request) use ($app) {
             $dbConnection->insert(
                 'blog_post',
                 array(
-                    'author' => $name,
+                    'author' => $name,                          //place the user/ author in the db
                 )
 
             );
@@ -211,7 +169,7 @@ $app->match('/login', function (Request $request) use ($app) {
 
 
 $app->get('/logout', function () use ($app) {
-    session_start();
+    session_start();                                    // first start before destroying -- logout destroy and unset the session.
     session_destroy();
     session_unset();
 

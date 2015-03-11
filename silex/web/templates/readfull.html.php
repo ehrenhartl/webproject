@@ -1,9 +1,18 @@
 <?php
+/**
+ * @var $view
+ * @var $slots \Symfony\Component\Templating\Helper\SlotsHelper
+ *
+ */
+
+?>
+
+<?php
 $view->extend('layout.html.php');
 $view['slots']->set('title', 'Eintrag: ' . $id);
 ?>
 
-<!-- Datei, die zum darstellen eines einzelnen Beitrags genutzt wird -->
+<!-- Datei, die zum Darstellen eines einzelnen Beitrags genutzt wird -->
 
 
 <div class="container">

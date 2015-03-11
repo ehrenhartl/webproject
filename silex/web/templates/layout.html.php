@@ -13,8 +13,8 @@ $title = $view["slots"]->get("title");
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="webproject">
+    <meta name="author" content="Leon Ehrenhart">
 
     <title> <?= $title ?> </title>
 
@@ -25,9 +25,9 @@ $title = $view["slots"]->get("title");
 
     <link rel="stylesheet" type="text/css" href="/css/style.css">
     <script src="../vendor/jquery/dist/jquery.min.js"></script>
-    <script src="../vendor/jquery/dist/jquery.min.js"></script>
 
 
+    <!-- fandest du auch sehr komisch warum das nicht erkennt wird. -->
     <!-- Das neueste kompilierte und minimierte CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 

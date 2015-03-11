@@ -1,3 +1,11 @@
+<?php
+/**
+ * @var $view
+ * @var $slots \Symfony\Component\Templating\Helper\SlotsHelper
+ *
+ */
+
+?>
 <?php $view->extend('layout.html.php') ?>
 <?php $view['slots']->set('title', 'home') ?>
 
@@ -8,7 +16,7 @@
 
     <div class="container">
 
-        <div class="alert alert-danger" role="alert">Bitte alle Felder ausfüllen!</div>
+        <div class="alert alert-danger" role="alert">One field was empty!</div>
     </div>
 
 <?php } ?>
