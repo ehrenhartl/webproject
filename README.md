@@ -1,3 +1,14 @@
+Vollendetes Webprojekt:
+
+nur vagrant up. --> richtet alles ein. mit erweiterer Datenbank.
+localhost:8081/static
+
+Viele Grüße
+Leon Ehrenhart
+
+
+
+
 Vagrant Silex
 ==================
 
